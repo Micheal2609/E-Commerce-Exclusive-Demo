@@ -37,13 +37,12 @@ const SideBar = () => {
   }
 
   return (
-    <aside className="w-full col-span-1 border-r border-gray-200">
-      <nav className="p-0 m-0">
+    <aside className="col-span-1 border-r border-gray-200">
         <ul className="list-none">
           {items.map(parent => (
             <li key={parent.id} className="py-2 hover:cursor-pointer" onClick={() => toggle(parent.id)}>
               <div className="flex items-center justify-between">
-                <span className="">{parent.label}</span>
+                <span className="pr-5">{parent.label}</span>
                 {parent.children ? (
                   <button
                     onClick={() => toggle(parent.id)}
@@ -56,9 +55,9 @@ const SideBar = () => {
               </div>
 
               {parent.children && open[parent.id] && (
-                <ul className="list-none pl-3 mt-2">
+                <ul className="list-none pl-3">
                   {parent.children.map(child => (
-                    <li key={child.id} className="py-1">
+                    <li key={child.id} className="py-2 pr-5">
                       <a href={`#${child.id}`} className="text-gray-900 no-underline">{child.label}</a>
                     </li>
                   ))}
@@ -67,7 +66,6 @@ const SideBar = () => {
             </li>
           ))}
         </ul>
-      </nav>
     </aside>
   )
 }

@@ -2,9 +2,9 @@ import React from "react";
 
 const Navbar= () => {
     return (
-        <nav className="grid grid-cols-3 items-center p-3 border-b border-gray-200 bg-white">
+        <nav className="grid grid-cols-4 items-center px-36 py-3 border-b border-gray-200 bg-white">
             {/* 3 equally sized columns: logo | menu | search+icons */}
-            <div className="flex items-center justify-center">
+            <div className="col-span-1 flex items-center justify-start">
                 <div className="flex items-center gap-3">
                     <div
                         aria-hidden={true}
@@ -16,7 +16,7 @@ const Navbar= () => {
                 </div>
             </div>
 
-            <div className="flex items-center justify-center">
+            <div className="col-span-2 flex items-center justify-center">
                 <ul className="flex gap-3 items-center list-none m-0!">
                     <li>
                         <a href="#" className="text-gray-900 no-underline px-4 hover:underline">
@@ -41,7 +41,7 @@ const Navbar= () => {
                 </ul>
             </div>
 
-            <div className="flex items-center justify-end gap-3">
+            <div className="col-span-1 flex items-center justify-end gap-3">
                 <label htmlFor="nav-search" className="sr-only">
                     Tìm kiếm
                 </label>
