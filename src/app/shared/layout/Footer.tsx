@@ -6,8 +6,8 @@ import { TbBrandTwitter } from "react-icons/tb";
 
 const Footer = () => {
   return (
-    <div>
-      <div className="grid grid-cols-5 px-36 py-3 bg-black text-white gap-10">
+    <div className="bg-black">
+      <div className="grid grid-cols-5 px-36 py-20 text-white gap-10">
         <div className="flex flex-col items-start gap-3">
           <span className="font-bold text-lg">Exclusive</span>
           <span className="text-md">Subscribe</span>
@@ -59,15 +59,26 @@ const Footer = () => {
               <Image src="/assets/appstore_pic.svg" alt="App Store" className="mb-2 cursor-pointer" />
             </div>
           </div>
-          <div className="icon-section flex gap-3">
-            <FaFacebookF />
-            <TbBrandTwitter />
-            <FaInstagram />
-            <RiLinkedinLine />
+          <div className="icon-section flex gap-10">
+            <button aria-label="Facebook" className="w-5 h-5 flex items-center justify-center rounded-full bg-transparent text-white transition-colors cursor-pointer">
+              <FaFacebookF className="text-white text-2xl" />
+            </button>
+            <button aria-label="Twitter" className="w-5 h-5 flex items-center justify-center rounded-full bg-transparent text-white transition-colors cursor-pointer">
+              <TbBrandTwitter className="text-white text-2xl" />
+            </button>
+            <button aria-label="Instagram" className="w-5 h-5 flex items-center justify-center rounded-full bg-transparent text-white transition-colors cursor-pointer">
+              <FaInstagram className="text-white text-2xl" />
+            </button>
+            <button aria-label="LinkedIn" className="w-5 h-5 flex items-center justify-center rounded-full bg-transparent text-white transition-colors cursor-pointer">
+              <RiLinkedinLine className="text-white text-2xl" />
+            </button>
           </div>
         </div>
       </div>
-    </div>
+      <div className="py-4 text-center">
+        <span className="text-sm text-[#3D3D3D]">&#64; Copyright Rimel 2022. All right reserved</span>
+      </div>
+    </div >
   )
 }
 
