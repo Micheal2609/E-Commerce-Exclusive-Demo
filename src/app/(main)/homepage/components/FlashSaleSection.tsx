@@ -1,4 +1,4 @@
-import { Typography, Tag, CountDownTimer, ViewAllButton } from "@/src/app/shared/components"
+import { Typography, Tag, CountDownTimer, Button } from "@/src/app/shared/components"
 import { ProductCardSection } from "./index";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
@@ -22,7 +22,9 @@ const FlashSaleSection = () => {
             <div className="py-5">
                 <ProductCardSection />
             </div>
-            <ViewAllButton />
+            <div className="my-7">
+                <Button label="View All Products" />
+            </div>
         </>
     )
 }

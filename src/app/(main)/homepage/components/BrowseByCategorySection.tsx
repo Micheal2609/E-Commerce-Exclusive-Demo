@@ -1,8 +1,8 @@
-import { Tag, Typography } from "@/src/app/shared/components";
+import { Line, Tag, Typography } from "@/src/app/shared/components";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import { BrandCardSection } from "./index";
 
-const BrowseByAttributeSection = () => {
+const BrowseByCategorySection = () => {
     return (
         <>
             <Tag label="Categories" />
@@ -18,7 +18,8 @@ const BrowseByAttributeSection = () => {
             <div className="py-5">
                 <BrandCardSection />
             </div>
+            <Line />
         </>
     )
 }
-export default BrowseByAttributeSection;
+export default BrowseByCategorySection;
