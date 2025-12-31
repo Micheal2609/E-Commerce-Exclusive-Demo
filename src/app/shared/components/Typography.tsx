@@ -3,7 +3,7 @@ interface TypographyProps {
 }
 const Typography = (props: TypographyProps) => {
     return (
-        <div className="text-4xl font-bold">{props.content}</div>
+        <div className="text-4xl font-semibold">{props.content}</div>
     )
 }
 

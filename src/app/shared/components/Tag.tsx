@@ -6,7 +6,7 @@ interface TagProps {
 
 const Tag = (props: TagProps) => {
   return (
-    <div className="border-l-20 border-[#DB4444] p-2 text-[#DB4444]">{props.label}</div>
+    <div className="border-l-20 border-[#DB4444] p-2 text-[#DB4444] font-semibold">{props.label}</div>
   )
 }
 

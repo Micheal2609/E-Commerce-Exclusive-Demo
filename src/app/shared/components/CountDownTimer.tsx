@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface CountDownTimerProps {
     /** Target end time. If provided, it takes precedence over duration/durationType */
@@ -50,13 +50,13 @@ const parseEndAt = (endAt?: Date | string | number) => {
     return Number.isNaN(n) ? null : n;
 };
 
-const CountDownTimer: React.FC<CountDownTimerProps> = ({
+const CountDownTimer = ({
     endAt,
     duration = 0,
     durationType = 'seconds',
     isRunning = true,
     onComplete,
-}) => {
+}: CountDownTimerProps) => {
     const running = isRunning;
 
     // Store computed target timestamp (ms)
@@ -119,23 +119,23 @@ const CountDownTimer: React.FC<CountDownTimerProps> = ({
     return (
         <div className="flex gap-5">
             <div className="flex flex-col items-center">
-                <span className="py-1">Days</span>
-                <span className="text-4xl font-bold">{formatTwoDigits(days)}</span>
+                <span className="py-1 font-medium">Days</span>
+                <span className="text-4xl font-semibold">{formatTwoDigits(days)}</span>
             </div>
             <div className="flex items-center pt-2 text-4xl text-[#E07575]">:</div>
             <div className="flex flex-col items-center">
-                <span className="py-1">Hours</span>
-                <span className="text-4xl font-bold">{formatTwoDigits(hours)}</span>
+                <span className="py-1 font-medium">Hours</span>
+                <span className="text-4xl font-semibold">{formatTwoDigits(hours)}</span>
             </div>
             <div className="flex items-center pt-2 text-4xl text-[#E07575]">:</div>
             <div className="flex flex-col items-center ">
-                <span className="py-1">Minutes</span>
-                <span className="text-4xl font-bold">{formatTwoDigits(minutes)}</span>
+                <span className="py-1 font-medium">Minutes</span>
+                <span className="text-4xl font-semibold">{formatTwoDigits(minutes)}</span>
             </div>
             <div className="flex items-center pt-2 text-4xl text-[#E07575]">:</div>
             <div className="flex flex-col items-center">
-                <span className="py-1">Seconds</span>
-                <span className="text-4xl font-bold">{formatTwoDigits(seconds)}</span>
+                <span className="py-1 font-medium">Seconds</span>
+                <span className="text-4xl font-semibold">{formatTwoDigits(seconds)}</span>
             </div>
         </div>
     );

@@ -1,0 +1,1 @@
+export { type I_Product } from "./Product";
