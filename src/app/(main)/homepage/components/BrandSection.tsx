@@ -16,8 +16,16 @@ const BrandSection = () => {
                     <Button label="Buy Now" backgroundColor="#00FF66" color="#FFFFFF" />
                 </div>
             </div>
-            <div className="bg">
-                <Image src="/assets/images/product/jlb_boombox_hero.png" alt="Brand Logos" />
+            <div className="relative flex items-center justify-center">
+                {/* Nền xám mờ */}
+                <div className="absolute w-120 h-120 rounded-full bg-[#6c6868] blur-3xl opacity-70"></div>
+
+                {/* Ảnh loa */}
+                <Image
+                    src="/assets/images/product/jlb_boombox_hero.png"
+                    alt="Speaker"
+                    className="relative z-10"
+                />
             </div>
         </div>
     )
