@@ -23,7 +23,9 @@ const FlashSaleSection = () => {
                 <ProductCardSection />
             </div>
             <div className="my-7">
-                <Button label="View All Products" />
+                <div className="flex justify-center">
+                    <Button label="View All Products" />
+                </div>
             </div>
         </>
     )

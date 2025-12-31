@@ -10,6 +10,8 @@ interface CountDownTimerProps {
     durationType?: 'seconds' | 'minutes' | 'hours' | 'days';
     /** Controls whether the timer is running (true = counting down) */
     isRunning?: boolean;
+    /** Display type - currently only 'default' is supported */
+    type?: 'default' | 'round';
     /** Called once when the countdown reaches zero */
     onComplete?: () => void;
 }
@@ -55,6 +57,7 @@ const CountDownTimer = ({
     duration = 0,
     durationType = 'seconds',
     isRunning = true,
+    type = 'default',
     onComplete,
 }: CountDownTimerProps) => {
     const running = isRunning;
@@ -116,6 +119,28 @@ const CountDownTimer = ({
 
     const { days, hours, minutes, seconds } = getTimeParts(remainingMs);
 
+    if (type === 'round') {
+        return (
+            <div className="flex gap-5">
+                <div className="flex flex-col items-center justify-center bg-white rounded-full w-24 h-24">
+                    <span className="text-4xl font-semibold">{formatTwoDigits(days)}</span>
+                    <span className="py-1 font-medium">Days</span>
+                </div>
+                <div className="flex flex-col items-center justify-center bg-white rounded-full w-24 h-24">
+                    <span className="text-4xl font-semibold">{formatTwoDigits(hours)}</span>
+                    <span className="py-1 font-medium">Hours</span>
+                </div>
+                <div className="flex flex-col items-center justify-center bg-white rounded-full w-24 h-24">
+                    <span className="text-4xl font-semibold">{formatTwoDigits(minutes)}</span>
+                    <span className="py-1 font-medium">Minutes</span>
+                </div>
+                <div className="flex flex-col items-center justify-center bg-white rounded-full w-24 h-24">
+                    <span className="text-4xl font-semibold">{formatTwoDigits(seconds)}</span>
+                    <span className="py-1 font-medium">Seconds</span>
+                </div>
+            </div>
+        )
+    }
     return (
         <div className="flex gap-5">
             <div className="flex flex-col items-center">
@@ -128,7 +153,7 @@ const CountDownTimer = ({
                 <span className="text-4xl font-semibold">{formatTwoDigits(hours)}</span>
             </div>
             <div className="flex items-center pt-2 text-4xl text-[#E07575]">:</div>
-            <div className="flex flex-col items-center ">
+            <div className="flex flex-col items-center">
                 <span className="py-1 font-medium">Minutes</span>
                 <span className="text-4xl font-semibold">{formatTwoDigits(minutes)}</span>
             </div>

@@ -1,11 +1,11 @@
 interface ButtonProps {
     label?: string;
+    backgroundColor?: string;
+    color?: string;
 }
-const Button = ({ label }: ButtonProps) => {
+const Button = ({ label, backgroundColor = "#DB4444", color = "#FFFFFF" }: ButtonProps) => {
     return (
-        <div className="flex justify-center">
-            <span className="text-[#FFFFFF] font-medium cursor-pointer bg-[#DB4444] px-12 py-4 my-5">{label}</span>
-        </div>
+        <span className={`text-[${color}] font-medium cursor-pointer bg-[${backgroundColor}] px-12 py-4 my-5`}>{label}</span>
     )
 }
 

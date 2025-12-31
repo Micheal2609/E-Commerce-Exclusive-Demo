@@ -1,4 +1,5 @@
 import { Button, Line, Tag, Typography } from "@/src/app/shared/components";
+import ProductCardSection from "./ProductCardSection";
 
 const BestSellingProductSection = () => {
     return (
@@ -11,6 +12,7 @@ const BestSellingProductSection = () => {
                     <Button label="View All" />
             </div>
             <div className="py-5">
+                <ProductCardSection />
             </div>
             <Line />
         </>
