@@ -1,18 +1,14 @@
-import { Typography, Tag, CountDownTimer, ViewAllButton } from "@/src/app/shared/components"
-import { ProductCardSection } from "./index";
+import { Tag, Typography } from "@/src/app/shared/components";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
+import { BrandCardSection } from "./index";
 
-
-const FlashSaleSection = () => {
-    const flashSaleEndAt = new Date();
-    flashSaleEndAt.setDate(flashSaleEndAt.getDate() + 5); // Flash sale ends in 5 days
+const BrowseByAttributeSection = () => {
     return (
         <>
-            <Tag label="Today's" />
+            <Tag label="Categories" />
             <div className="flex justify-between">
-                <div className="flex items-end gap-25">
-                    <Typography content="Flash Sale" />
-                    <CountDownTimer endAt={flashSaleEndAt} isRunning={true} />
+                <div className="flex items-end gap-25 py-5">
+                    <Typography content="Browse By Category" />
                 </div>
                 <div className="flex items-center gap-2">
                     <button className="rounded-full bg-[#F5F5F5] p-3 w-2.875 h-2.875 cursor-pointer hover:bg-[#cdcdcd]"><FaArrowLeftLong /></button>
@@ -20,11 +16,9 @@ const FlashSaleSection = () => {
                 </div>
             </div>
             <div className="py-5">
-                <ProductCardSection />
+                <BrandCardSection />
             </div>
-            <ViewAllButton />
         </>
     )
 }
-
-export default FlashSaleSection
+export default BrowseByAttributeSection;

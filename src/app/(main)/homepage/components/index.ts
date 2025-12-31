@@ -1,3 +1,5 @@
 export { default as FlashSaleSection } from './FlashSaleSection'
 export { default as BannerSection } from './BannerSection'
 export { default as ProductCardSection } from './ProductCardSection'
+export { default as BrandCardSection } from './BrandCardSection'
+export { default as BrowseByAttributeSection } from './BrowseByAttributeSection'

@@ -1,4 +1,4 @@
-import { CartProduct } from "@/src/app/shared/components/index";
+import { ProductCard } from "@/src/app/shared/components/index";
 import { I_Product } from "@/src/app/shared/interface";
 
 const ProductCardSection = () => {
@@ -67,7 +67,7 @@ const ProductCardSection = () => {
 
   return (
     <div className="flex gap-2 overflow-hidden overflow-x-scroll">
-      {dataFake && dataFake.map((item) => <CartProduct product={item} key={item.id} />)}
+      {dataFake && dataFake.map((item) => <ProductCard product={item} key={item.id} />)}
     </div>
   );
 };

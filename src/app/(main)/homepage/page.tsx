@@ -1,4 +1,5 @@
-import { FlashSaleSection, BannerSection } from "./components/index"
+import { Line } from "../../shared/components"
+import { FlashSaleSection, BannerSection, BrowseByAttributeSection} from "./components/index"
 
 
 const HomePage = () => {
@@ -6,6 +7,8 @@ const HomePage = () => {
     <div className="w-full px-36 py-3">
       <BannerSection />
       <FlashSaleSection />
+      <Line />
+      <BrowseByAttributeSection />
     </div>
   )
 }
