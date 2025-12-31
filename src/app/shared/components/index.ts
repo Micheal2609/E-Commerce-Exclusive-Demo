@@ -1,3 +1,5 @@
 export { default as Banner } from './Banner'
 export { default as SideBar } from './SideBar'
 export { default as Tag } from './Tag'
+export { default as Typography } from './Typography'
+export { default as CountDownTimer } from './CountDownTimer'
