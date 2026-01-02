@@ -26,81 +26,82 @@ const Navbar = () => {
                 </Link>
             </div>
 
-            <div className="col-span-2 flex items-center justify-center">
-                <ul className="flex gap-10 items-center list-none m-0!">
-                    <li>
-                        <Link href="#" className="text-gray-900! text-lg! no-underline px-4 hover:underline">
-                            Home
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#" className="text-gray-900! text-lg! no-underline px-4 hover:underline">
-                            Contact
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#" className="text-gray-900! text-lg! no-underline px-4 hover:underline">
-                            About
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#" className="text-gray-900! text-lg! no-underline px-4 hover:underline">
-                            Sign Up
-                        </Link>
-                    </li>
-                </ul>
-            </div>
+            <div className="col-span-3 flex items-center justify-center">
+                <div className="flex justify-between w-full">
+                    <div className="col-span-1 pl-11.25">
+                        <ul className="flex gap-10 items-center list-none m-0!">
+                            <li>
+                                <Link href="#" className="text-gray-900! text-lg! no-underline px-4 hover:underline">
+                                    Home
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="#" className="text-gray-900! text-lg! no-underline px-4 hover:underline">
+                                    Contact
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="#" className="text-gray-900! text-lg! no-underline px-4 hover:underline">
+                                    About
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="#" className="text-gray-900! text-lg! no-underline px-4 hover:underline">
+                                    Sign Up
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="col-span-1 flex items-center justify-end gap-2">
+                        <div className="flex items-center gap-2 px-2 py-1 border border-gray-200 rounded-lg bg-gray-50">
+                            <input
+                                id="nav-search"
+                                type="search"
+                                placeholder="What are you looking for?"
+                                className="bg-transparent outline-none border-none w-56"
+                            />
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="#6b7280"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                aria-hidden={true}
+                            >
+                                <circle cx="11" cy="11" r="7" />
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                            </svg>
+                        </div>
 
-            <div className="col-span-1 flex items-center justify-end gap-2">
-                <label htmlFor="nav-search" className="sr-only">
-                    Tìm kiếm
-                </label>
-                <div className="flex items-center gap-2 px-2 py-1 border border-gray-200 rounded-lg bg-gray-50">
-                    <input
-                        id="nav-search"
-                        type="search"
-                        placeholder="Tìm kiếm..."
-                        className="bg-transparent outline-none border-none w-56"
-                    />
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#6b7280"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        aria-hidden={true}
-                    >
-                        <circle cx="11" cy="11" r="7" />
-                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                    </svg>
+                        <button
+                            aria-label="Yêu thích"
+                            className="group inline-flex items-center justify-center w-10 h-10 rounded-full bg-transparent cursor-pointer hover:bg-[#DB4444]"
+                        >
+                            <Image className="transition-all duration-150 filter group-hover:brightness-0 group-hover:invert" src="/assets/images/icon/Wishlist.svg" alt="Wishlist Icon" preview={false} />
+                        </button>
+                        <button
+                            aria-label="Giỏ hàng"
+                            className="group inline-flex items-center justify-center w-10 h-10 rounded-full bg-transparent cursor-pointer hover:bg-[#DB4444]"
+                        >
+                            <Image className="transition-all duration-150 filter group-hover:brightness-0 group-hover:invert" src="/assets/images/icon/Cart1 with buy.svg" alt="Cart Icon" preview={false} />
+                        </button>
+
+                        <div
+                            aria-label="Tài khoản"
+                            className="group inline-flex items-center justify-center w-10 h-10 bg-transparent cursor-pointer rounded-full relative hover:bg-[#DB4444]"
+                            onClick={() => handleToggleMenu(!isSelected)}
+                        >
+                            <Image className="transition-all duration-150 filter group-hover:brightness-0 group-hover:invert w-full h-full" src="/assets/images/icon/user.svg" alt="User Icon" preview={false} />
+                            {isSelected && <Menu />}
+                        </div>
+                    </div>
                 </div>
-
-                <button
-                    aria-label="Yêu thích"
-                    className="inline-flex items-center justify-center w-10 h-10 rounded-md bg-transparent cursor-pointer"
-                >
-                    <Image src="/assets/images/icon/Wishlist.svg" alt="Cart Icon" width={30} height={30} preview={false} />
-                </button>
-                <button
-                    aria-label="Giỏ hàng"
-                    className="inline-flex items-center justify-center w-10 h-10 rounded-md bg-transparent cursor-pointer"
-                >
-                    <Image src="/assets/images/icon/Cart1 with buy.svg" alt="Cart Icon" width={30} height={30} preview={false} />
-                </button>
-
-                <button
-                    aria-label="Tài khoản"
-                    className="inline-flex items-center justify-center w-10 h-10 rounded-md bg-transparent cursor-pointer relative"
-                    onClick={() => handleToggleMenu(!isSelected)}
-                >
-                    <Image src="/assets/images/icon/user.svg" alt="Cart Icon" width={30} height={30} preview={false} />
-                    { isSelected && <Menu />}
-                </button>
             </div>
+
         </nav>
     );
 };
