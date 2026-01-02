@@ -1,8 +1,16 @@
+'use client';
+import { useState } from "react";
 import { Image } from "antd";
 import Link from "antd/es/typography/Link";
-import React from "react";
+import { Menu } from "../components";
 
 const Navbar = () => {
+    const [isSelected, setIsSelected] = useState(false);
+
+    const handleToggleMenu = (isSelected: boolean) => {
+        console.log("isSelected", isSelected);
+        setIsSelected(isSelected);
+    }
     return (
         <nav className="grid grid-cols-4 items-center px-36 py-3 border-b border-gray-200 bg-white">
             {/* 3 equally sized columns: logo | menu | search+icons */}
@@ -48,6 +56,12 @@ const Navbar = () => {
                     Tìm kiếm
                 </label>
                 <div className="flex items-center gap-2 px-2 py-1 border border-gray-200 rounded-lg bg-gray-50">
+                    <input
+                        id="nav-search"
+                        type="search"
+                        placeholder="Tìm kiếm..."
+                        className="bg-transparent outline-none border-none w-56"
+                    />
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -63,12 +77,6 @@ const Navbar = () => {
                         <circle cx="11" cy="11" r="7" />
                         <line x1="21" y1="21" x2="16.65" y2="16.65" />
                     </svg>
-                    <input
-                        id="nav-search"
-                        type="search"
-                        placeholder="Tìm kiếm..."
-                        className="bg-transparent outline-none border-none w-56"
-                    />
                 </div>
 
                 <button
@@ -86,9 +94,11 @@ const Navbar = () => {
 
                 <button
                     aria-label="Tài khoản"
-                    className="inline-flex items-center justify-center w-10 h-10 rounded-md bg-transparent cursor-pointer"
+                    className="inline-flex items-center justify-center w-10 h-10 rounded-md bg-transparent cursor-pointer relative"
+                    onClick={() => handleToggleMenu(!isSelected)}
                 >
                     <Image src="/assets/images/icon/user.svg" alt="Cart Icon" width={30} height={30} preview={false} />
+                    { isSelected && <Menu />}
                 </button>
             </div>
         </nav>
