@@ -17,7 +17,7 @@ const CartProduct = ({ product }: CartProductProps) => {
                     <button className="w-2.125 h-2.125 bg-[#FFFFFF] p-2 rounded-full"><FaRegHeart /></button>
                     <button className="w-2.125 h-2.125 bg-[#FFFFFF] p-2 rounded-full"><IoEyeOutline /></button>
                 </div>
-                <div className="transform translte-50% -50% flex justify-center items-center h-full">
+                <div className="flex justify-center items-center h-full">
                     <Image src={product?.imageUrl} alt="product image" />
                 </div>
             </div>

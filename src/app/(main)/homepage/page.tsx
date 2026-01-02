@@ -1,5 +1,5 @@
 import { Line } from "../../shared/components"
-import { FlashSaleSection, BannerSection, BrowseByCategorySection, BestSellingProductSection, BrandSection} from "./components/index"
+import { FlashSaleSection, BannerSection, BrowseByCategorySection, BestSellingProductSection, BrandSection, ExploreOurProductSection, FeatureSection, ServiceSection } from "./components/index"
 
 
 const HomePage = () => {
@@ -11,6 +11,11 @@ const HomePage = () => {
       <BrowseByCategorySection />
       <BestSellingProductSection />
       <BrandSection />
+      <ExploreOurProductSection />
+      <FeatureSection />
+      <div className="my-20">
+        <ServiceSection />
+      </div>
     </div>
   )
 }
