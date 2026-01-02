@@ -1,11 +1,12 @@
+import Link from "antd/es/typography/Link";
 import React from "react";
 
-const Navbar= () => {
+const Navbar = () => {
     return (
         <nav className="grid grid-cols-4 items-center px-36 py-3 border-b border-gray-200 bg-white">
             {/* 3 equally sized columns: logo | menu | search+icons */}
             <div className="col-span-1 flex items-center justify-start">
-                <div className="flex items-center gap-3">
+                <Link href="/" className="no-underline text-black! flex items-center gap-3">
                     <div
                         aria-hidden={true}
                         className="w-10 h-10 bg-gray-900 text-white flex items-center justify-center rounded-md font-bold"
@@ -13,7 +14,7 @@ const Navbar= () => {
                         E
                     </div>
                     <span className="text-lg text font-bold">Exclusive</span>
-                </div>
+                </Link>
             </div>
 
             <div className="col-span-2 flex items-center justify-center">

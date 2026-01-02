@@ -1,8 +1,8 @@
-"use client";
-
+'use client';
 import { Button } from "@/src/app/shared/components";
 import { Form, Image, Input } from "antd";
 import Link from "next/link";
+import { FcGoogle } from "react-icons/fc";
 
 const SignInPage = () => {
     return (
@@ -18,26 +18,37 @@ const SignInPage = () => {
                     initialValues={{ remember: true }}
                 >
                     <Form.Item
+                        name="name"
+                        rules={[{ required: true, message: 'Please input your name!' }]}
+                    >
+                        <Input placeholder="Name" variant="underlined" style={{
+                            padding: 0
+                        }}/>
+                    </Form.Item>
+                    <Form.Item
                         name="email"
                         rules={[{ required: true, message: 'Please input your email or phone number!' }]}
                     >
-                        <Input placeholder="Email or phone number" variant="underlined" />
+                        <Input placeholder="Email or phone number" variant="underlined" style={{
+                            padding: 0
+                        }}/>
                     </Form.Item>
                     <Form.Item
                         name="password"
                         rules={[{ required: true, message: 'Please input your password!' }]}
                     >
-                        <Input placeholder="Password" variant="underlined" className="p-4" />
+                        <Input placeholder="Password" variant="underlined" style={{
+                            padding: 0
+                        }}/>
                     </Form.Item>
                 </Form>
-                <div className="flex justify-between items-center">
-                    <Button backgroundColor="#DB4444" label="Log In" className="rounded-sm" />
-                    <Button backgroundColor="#FFFFFF" label="Forget Password?" color="#DB4444" />
+                <div className="flex flex-col">
+                    <Button backgroundColor="#DB4444" label="Create account" className="rounded-sm text-center"/>
+                    <Button backgroundColor="#FFFFFF" label="Sign Up with Google" color="#000000" className="border border-[#000000] text-center" icon={<FcGoogle />}/>
                 </div>
-                <div className="text-center">Not have an account? <Link href="/auth/sign-up" className="underline font-medium">Sign up</Link></div>
+                <div className="text-center">Already have account? <Link href="/auth/sign-in" className="underline font-medium">Log in</Link></div>
             </div>
         </div>
     );
-}
-
+};
 export default SignInPage;
