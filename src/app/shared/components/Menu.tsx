@@ -6,36 +6,36 @@ interface MenuProps {
 
 const Menu = ({ classname = '' }: MenuProps) => {
     return (
-        <div className={`${classname} absolute top-12 right-0 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-50`}>
-            <ul className="flex flex-col p-0 m-0! list-none bg-white/0">
+        <div className={`${classname} absolute top-12 right-0 w-48 bg-linear-to-b from-white/20 via-white/10 to-white/5 backdrop-blur-3xl border border-white/20 rounded-xl shadow-lg z-50`}>
+            <ul className="flex flex-col p-0 m-0! list-none">
                 <li>
-                    <Link href="#" className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100">
+                    <Link href="#" className="flex items-center gap-2 px-4 py-2">
                         <span></span>
-                        <span className="text-sm">Manage My Account</span>
+                        <span className="text-sm text-white">Manage My Account</span>
                     </Link>
                 </li>
                 <li>
-                    <Link href="#" className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100">
+                    <Link href="#" className="flex items-center gap-2 px-4 py-2">
                         <span></span>
-                        <span className="text-sm">My Order</span>
+                        <span className="text-sm text-white">My Order</span>
                     </Link>
                 </li>
                 <li>
-                    <Link href="#" className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100">
+                    <Link href="#" className="flex items-center gap-2 px-4 py-2">
                         <span></span>
-                        <span className="text-sm">My Cancellations</span>
+                        <span className="text-sm text-white">My Cancellations</span>
                     </Link>
                 </li>
                 <li>
-                    <Link href="#" className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100">
+                    <Link href="#" className="flex items-center gap-2 px-4 py-2">
                         <span></span>
-                        <span className="text-sm">My Reviews</span>
+                        <span className="text-sm text-white">My Reviews</span>
                     </Link>
                 </li>
                 <li>
-                    <Link href="#" className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100">
+                    <Link href="#" className="flex items-center gap-2 px-4 py-2">
                         <span></span>
-                        <span className="text-sm">Logout</span>
+                        <span className="text-sm text-white">Logout</span>
                     </Link>
                 </li>
             </ul>

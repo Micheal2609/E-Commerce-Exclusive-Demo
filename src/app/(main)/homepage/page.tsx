@@ -4,7 +4,7 @@ import { FlashSaleSection, BannerSection, BrowseByCategorySection, BestSellingPr
 
 const HomePage = () => {
   return (
-    <div className="w-full px-36 py-3">
+    <div className="w-full px-36 py-7">
       <BannerSection />
       <FlashSaleSection />
       <Line />
