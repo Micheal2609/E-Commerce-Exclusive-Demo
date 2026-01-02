@@ -1,11 +1,25 @@
 'use client';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Image } from "antd";
 import Link from "antd/es/typography/Link";
 import { Menu } from "../components";
 
 const Navbar = () => {
     const [isSelected, setIsSelected] = useState(false);
+    const [isLoginedIn, setIsLoggedIn] = useState(false);
+
+    const handleChangeLoginStatus = (status: boolean) => {
+        setIsLoggedIn(status);
+    }
+
+    // useEffect(() => {
+    //     if (localStorage.getItem("token")) {
+    //         handleChangeLoginStatus(true);
+    //     } else {
+    //         handleChangeLoginStatus(false);
+    //     }
+    // }, [isLoginedIn]);
+
 
     const handleToggleMenu = (isSelected: boolean) => {
         console.log("isSelected", isSelected);
@@ -31,22 +45,22 @@ const Navbar = () => {
                     <div className="col-span-1 pl-11.25">
                         <ul className="flex gap-10 items-center list-none m-0!">
                             <li>
-                                <Link href="#" className="text-gray-900! text-lg! no-underline px-4 hover:underline">
+                                <Link href="/homepage" className="text-gray-900! text-lg! no-underline px-4 hover:underline! leading-loose">
                                     Home
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-gray-900! text-lg! no-underline px-4 hover:underline">
+                                <Link href="#" className="text-gray-900! text-lg! no-underline px-4 hover:underline! leading-loose">
                                     Contact
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-gray-900! text-lg! no-underline px-4 hover:underline">
+                                <Link href="#" className="text-gray-900! text-lg! no-underline px-4 hover:underline! leading-loose">
                                     About
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-gray-900! text-lg! no-underline px-4 hover:underline">
+                                <Link href="/auth/sign-up" className="text-gray-900! text-lg! no-underline px-4 hover:underline! leading-loose">
                                     Sign Up
                                 </Link>
                             </li>
@@ -90,14 +104,18 @@ const Navbar = () => {
                             <Image className="transition-all duration-150 filter group-hover:brightness-0 group-hover:invert" src="/assets/images/icon/Cart1 with buy.svg" alt="Cart Icon" preview={false} />
                         </button>
 
-                        <div
-                            aria-label="Tài khoản"
-                            className="group inline-flex items-center justify-center w-10 h-10 bg-transparent cursor-pointer rounded-full relative hover:bg-[#DB4444]"
-                            onClick={() => handleToggleMenu(!isSelected)}
-                        >
-                            <Image className="transition-all duration-150 filter group-hover:brightness-0 group-hover:invert w-full h-full" src="/assets/images/icon/user.svg" alt="User Icon" preview={false} />
-                            {isSelected && <Menu />}
-                        </div>
+                        {
+                            isLoginedIn && <div
+                                aria-label="Tài khoản"
+                                className="group inline-flex items-center justify-center w-10 h-10 bg-transparent cursor-pointer rounded-full relative hover:bg-[#DB4444]"
+                                onClick={() => handleToggleMenu(!isSelected)}
+                            >
+                                <Image className="transition-all duration-150 filter group-hover:brightness-0 group-hover:invert w-full h-full" src="/assets/images/icon/user.svg" alt="User Icon" preview={false} />
+                                {isSelected && <Menu />}
+                            </div>
+                        }
+
+
                     </div>
                 </div>
             </div>
