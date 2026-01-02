@@ -1,3 +1,4 @@
+import { Image } from "antd";
 import Link from "antd/es/typography/Link";
 import React from "react";
 
@@ -18,31 +19,31 @@ const Navbar = () => {
             </div>
 
             <div className="col-span-2 flex items-center justify-center">
-                <ul className="flex gap-3 items-center list-none m-0!">
+                <ul className="flex gap-10 items-center list-none m-0!">
                     <li>
-                        <a href="#" className="text-gray-900 no-underline px-4 hover:underline">
+                        <Link href="#" className="text-gray-900! text-lg! no-underline px-4 hover:underline">
                             Home
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#" className="text-gray-900 no-underline px-4 hover:underline">
+                        <Link href="#" className="text-gray-900! text-lg! no-underline px-4 hover:underline">
                             Contact
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#" className="text-gray-900 no-underline px-4 hover:underline">
+                        <Link href="#" className="text-gray-900! text-lg! no-underline px-4 hover:underline">
                             About
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#" className="text-gray-900 no-underline px-4 hover:underline">
+                        <Link href="#" className="text-gray-900! text-lg! no-underline px-4 hover:underline">
                             Sign Up
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>
 
-            <div className="col-span-1 flex items-center justify-end gap-3">
+            <div className="col-span-1 flex items-center justify-end gap-2">
                 <label htmlFor="nav-search" className="sr-only">
                     Tìm kiếm
                 </label>
@@ -71,47 +72,23 @@ const Navbar = () => {
                 </div>
 
                 <button
+                    aria-label="Yêu thích"
+                    className="inline-flex items-center justify-center w-10 h-10 rounded-md bg-transparent cursor-pointer"
+                >
+                    <Image src="/assets/images/icon/Wishlist.svg" alt="Cart Icon" width={30} height={30} preview={false} />
+                </button>
+                <button
                     aria-label="Giỏ hàng"
                     className="inline-flex items-center justify-center w-10 h-10 rounded-md bg-transparent cursor-pointer"
                 >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#111"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        aria-hidden={true}
-                    >
-                        <circle cx="9" cy="21" r="1" />
-                        <circle cx="20" cy="21" r="1" />
-                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
-                    </svg>
+                    <Image src="/assets/images/icon/Cart1 with buy.svg" alt="Cart Icon" width={30} height={30} preview={false} />
                 </button>
 
                 <button
                     aria-label="Tài khoản"
                     className="inline-flex items-center justify-center w-10 h-10 rounded-md bg-transparent cursor-pointer"
                 >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#111"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        aria-hidden={true}
-                    >
-                        <path d="M20 21v-2a4 4 0 0 0-3-3.87" />
-                        <path d="M4 21v-2a4 4 0 0 1 3-3.87" />
-                        <circle cx="12" cy="7" r="4" />
-                    </svg>
+                    <Image src="/assets/images/icon/user.svg" alt="Cart Icon" width={30} height={30} preview={false} />
                 </button>
             </div>
         </nav>
