@@ -55,7 +55,7 @@ const Navbar = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-gray-900! text-lg! no-underline px-4 hover:underline! leading-loose">
+                                <Link href="/about" className="text-gray-900! text-lg! no-underline px-4 hover:underline! leading-loose">
                                     About
                                 </Link>
                             </li>

@@ -6,7 +6,7 @@ const InformationSection = () => {
         <div className="col-span-1 flex flex-col items-start gap-5 border border-gray-200/40 shadow-xl rounded-md p-10">
             <div className="flex items-center gap-5">
                 <div className="w-10 h-10 rounded-full bg-[#DB4444] flex items-center justify-center">
-                    <Image src="/assets/images/icon/Phone.svg" alt="Contact Information Icon" preview={false} />
+                    <Image src="/assets/images/icon/Phone.svg" alt="Contact Information Icon" className="brightness-0 invert" preview={false} />
                 </div>
                 <div className="font-med">Contact Information</div>
             </div>
@@ -15,7 +15,7 @@ const InformationSection = () => {
             <Line />
             <div className="flex items-center gap-5">
                 <div className="w-10 h-10 rounded-full bg-[#DB4444] flex items-center justify-center">
-                    <Image src="/assets/images/icon/Mail.svg" alt="Contact Information Icon" preview={false} />
+                    <Image src="/assets/images/icon/Mail.svg" alt="Contact Information Icon" className="brightness-0 invert" preview={false} />
                 </div>
                 <div className="font-med">Write To US</div>
             </div>
