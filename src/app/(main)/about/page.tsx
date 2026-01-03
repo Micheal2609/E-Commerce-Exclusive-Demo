@@ -4,10 +4,12 @@ import { AboutHeroSection, StatsSection, TeamSection } from "./components/index"
 const AboutPage = () => {
   return (
     <div className="w-full px-36 py-10">
-        <AboutHeroSection />
-        <StatsSection />
-        <TeamSection />
+      <AboutHeroSection />
+      <StatsSection />
+      <TeamSection />
+      <div className="py-20">
         <ServiceSection />
+      </div>
     </div>
   );
 }
