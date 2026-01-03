@@ -21,20 +21,24 @@ const SignInPage = () => {
                         name="email"
                         rules={[{ required: true, message: 'Please input your email or phone number!' }]}
                     >
-                        <Input placeholder="Email or phone number" variant="underlined" />
+                        <Input placeholder="Email or phone number" variant="underlined" style={{
+                            padding: 0
+                        }}/>
                     </Form.Item>
                     <Form.Item
                         name="password"
                         rules={[{ required: true, message: 'Please input your password!' }]}
                     >
-                        <Input placeholder="Password" variant="underlined" className="p-4" />
+                        <Input placeholder="Password" variant="underlined" className="p-4" style={{
+                            padding: 0
+                        }}/>
                     </Form.Item>
                 </Form>
                 <div className="flex justify-between items-center">
                     <Button backgroundColor="#DB4444" label="Log In" className="rounded-sm" />
                     <Button backgroundColor="#FFFFFF" label="Forget Password?" color="#DB4444" />
                 </div>
-                <div className="text-center">Not have an account? <Link href="/auth/sign-up" className="underline font-medium">Sign up</Link></div>
+                <div className="text-center">Not have an account? <Link href="/auth/sign-up" className="font-medium hover:text-[#DB4444] hover:underline hover:font-bold">Sign up</Link></div>
             </div>
         </div>
     );

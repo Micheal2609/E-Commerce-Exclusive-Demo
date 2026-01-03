@@ -52,11 +52,11 @@ const Footer = () => {
           <span className="text-sm text-[#AFAFAF]">Save $3 with App New User Only</span>
           <div className="grid grid-cols-2">
             <div className="qr-code">
-              <Image src="/assets/qr_code.svg" alt="QR Code" className="mb-2 cursor-pointer" />
+              <Image src="/assets/images/qr_code.svg" alt="QR Code" className="mb-2 cursor-pointer" />
             </div>
             <div className="logo-brand">
-              <Image src="/assets/chplay_pic.svg" alt="CH Play" className="mb-2 cursor-pointer" />
-              <Image src="/assets/appstore_pic.svg" alt="App Store" className="mb-2 cursor-pointer" />
+              <Image src="/assets/images/chplay_pic.svg" alt="CH Play" className="mb-2 cursor-pointer" />
+              <Image src="/assets/images/appstore_pic.svg" alt="App Store" className="mb-2 cursor-pointer" />
             </div>
           </div>
           <div className="icon-section flex gap-10">

@@ -91,31 +91,30 @@ const Navbar = () => {
                             </svg>
                         </div>
 
-                        <button
+                        <Link
+                            href="/wishlist"
                             aria-label="Yêu thích"
-                            className="group inline-flex items-center justify-center w-10 h-10 rounded-full bg-transparent cursor-pointer hover:bg-[#DB4444]"
+                            className="group inline-flex items-center justify-center w-10 h-10 rounded-full bg-transparent cursor-pointer hover:bg-[#DB4444]!"
                         >
                             <Image className="transition-all duration-150 filter group-hover:brightness-0 group-hover:invert" src="/assets/images/icon/Wishlist.svg" alt="Wishlist Icon" preview={false} />
-                        </button>
-                        <button
+                        </Link>
+                        <Link
                             aria-label="Giỏ hàng"
-                            className="group inline-flex items-center justify-center w-10 h-10 rounded-full bg-transparent cursor-pointer hover:bg-[#DB4444]"
+                            className="group inline-flex items-center justify-center w-10 h-10 rounded-full bg-transparent cursor-pointer hover:bg-[#DB4444]!"
                         >
                             <Image className="transition-all duration-150 filter group-hover:brightness-0 group-hover:invert" src="/assets/images/icon/Cart1 with buy.svg" alt="Cart Icon" preview={false} />
-                        </button>
+                        </Link>
 
                         {
                             isLoginedIn && <div
                                 aria-label="Tài khoản"
-                                className="group inline-flex items-center justify-center w-10 h-10 bg-transparent cursor-pointer rounded-full relative hover:bg-[#DB4444]"
+                                className="group inline-flex items-center justify-center w-10 h-10 bg-transparent cursor-pointer rounded-full relative hover:bg-[#DB4444]!"
                                 onClick={() => handleToggleMenu(!isSelected)}
                             >
                                 <Image className="transition-all duration-150 filter group-hover:brightness-0 group-hover:invert w-full h-full" src="/assets/images/icon/user.svg" alt="User Icon" preview={false} />
                                 {isSelected && <Menu />}
                             </div>
                         }
-
-
                     </div>
                 </div>
             </div>

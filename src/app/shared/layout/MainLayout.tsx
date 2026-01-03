@@ -1,3 +1,4 @@
+'use client';
 import { Footer, Header, Navbar } from "./index"
 import { PropsWithChildren } from "react"
 

@@ -46,7 +46,7 @@ const SignInPage = () => {
                     <Button backgroundColor="#DB4444" label="Create account" className="rounded-sm text-center"/>
                     <Button backgroundColor="#FFFFFF" label="Sign Up with Google" color="#000000" className="border border-[#000000] text-center" icon={<FcGoogle />}/>
                 </div>
-                <div className="text-center">Already have account? <Link href="/auth/sign-in" className="underline font-medium">Log in</Link></div>
+                <div className="text-center">Already have account? <Link href="/auth/sign-in" className="hover:underline hover:font-bold hover:text-[#DB4444] font-medium">Log in</Link></div>
             </div>
         </div>
     );
