@@ -1,11 +1,11 @@
 'use client';
 import { PersonCard } from "@/src/app/shared/components/index";
 import { I_Person } from "@/src/app/shared/interface/index";
-import { Pagination } from "antd";
+import { Pagination } from "@/src/app/shared/components/index";
 import { useState } from "react";
 
 const TeamSection = () => {
-    const [page, setPage] =  useState(3);
+    const [page, setPage] = useState(3);
     const teamMembersDataFake: I_Person[] = [
         {
             id: "1",
@@ -48,29 +48,7 @@ const TeamSection = () => {
                     teamMembersDataFake.map((member) => (<PersonCard person={member} key={member.id} />))
                 )}
             </div>
-            {/* <Pagination pages={5} currentPage={1} onPageChange={hanlePaginationChange} /> */}
-            <Pagination
-                align="center"
-                current={page}
-                onChange={hanlePaginationChange}
-                total={5} // total items
-                pageSize={1} // mỗi trang 1 item -> số trang = total
-                showSizeChanger={false}
-                itemRender={(p, type, originalElement) => {
-                    if (type === 'page') {
-                        return (
-                            <button
-                                type="button"
-                                className="w-3 h-3 rounded-full mx-1 bg-gray-300"
-                                aria-current={p === page ? 'true' : undefined}
-                            >
-                                <div className={`rounded-full w-2.5 h-2.5 ${p === page ? 'bg-[#B44444]' : 'bg-gray-300'}`}></div>
-                            </button>
-                        );
-                    }
-                    return originalElement;
-                }}
-            />
+            <Pagination total={5} current={page} onChange={hanlePaginationChange} />
         </>
     );
 }
