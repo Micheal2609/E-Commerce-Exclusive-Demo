@@ -15,7 +15,7 @@ const Breadcrumb = () => {
       .replace(/\b\w/g, (c) => c.toUpperCase());
 
   return (
-    <nav className="flex items-center gap-2 text-sm">
+    <nav className="flex items-center gap-2 text-sm my-5">
       {/* HOME */}
       <Link href="/homepage" className="text-gray-500 hover:text-black">
         Homepage

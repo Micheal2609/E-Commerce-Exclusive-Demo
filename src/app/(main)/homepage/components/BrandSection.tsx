@@ -25,6 +25,7 @@ const BrandSection = () => {
                     src="/assets/images/product/jlb_boombox_hero.png"
                     alt="Speaker"
                     className="relative z-10"
+                    preview={false}
                 />
             </div>
         </div>
