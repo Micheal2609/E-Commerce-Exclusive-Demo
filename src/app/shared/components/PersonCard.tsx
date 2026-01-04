@@ -6,12 +6,11 @@ import { FaInstagram } from "react-icons/fa6";
 import { RiLinkedinLine } from "react-icons/ri";
 
 interface PersonCardProps {
-    key?: string;
     person: I_Person;
 }
-const PersonCard = ({ person, key = "" }: PersonCardProps) => {
+const PersonCard = ({ person }: PersonCardProps) => {
     return (
-        <div key={key} className="flex flex-col items-start gap-3">
+        <div key={person.id} className="flex flex-col items-start gap-3">
             <div className="flex items-center justify-center bg-[#F5F5F5] px-10 pt-10">
                 <Image src={person.photoUrl} alt={person.name} preview={false} />
             </div>

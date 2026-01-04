@@ -15,7 +15,7 @@ const AboutHeroSection = () => {
                 }}>Exclusive has more than 1 Million products to offer, growing at a very fast. Exclusive offers a diverse assotment in categories ranging  from consumer.</p>
             </div>
             <div className="">
-                <Image src="/assets/images/portrait-two-african-females-holding-shopping-bags-while-reacting-something-their-smartphone 1.png" alt="About Hero Image" />
+                <Image src="/assets/images/portrait-two-african-females-holding-shopping-bags-while-reacting-something-their-smartphone 1.png" alt="About Hero Image" preview={false} />
             </div>
         </div>
     );

@@ -10,7 +10,7 @@ const StatsSection = () => {
     ];
     return (
         <div className="flex justify-evenly items-center gap-5 my-10">
-            {dataFake.length > 0 && dataFake.map((item) => (<CardStats stats={item} key={item.id} />))}
+            {dataFake.length > 0 && dataFake.map((item) => (<CardStats key={item.id} stats={item} />))}
         </div>
     )
 };

@@ -45,7 +45,7 @@ const TeamSection = () => {
         <>
             <div className="w-full flex items-center justify-evenly py-10 gap-10">
                 {teamMembersDataFake.length > 0 && (
-                    teamMembersDataFake.map((member) => (<PersonCard person={member} key={member.id} />))
+                    teamMembersDataFake.map((member) => (<PersonCard key={member.id} person={member} />))
                 )}
             </div>
             <Pagination total={5} current={page} onChange={hanlePaginationChange} />
