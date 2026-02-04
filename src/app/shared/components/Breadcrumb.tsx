@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 const Breadcrumb = () => {
   const pathname = usePathname();
   const segments = pathname.split('/').filter(Boolean);
-  console.log("Breadcrumb segments:", segments);
 
   // Hàm convert slug → dạng Title Case
   const format = (str: string) =>

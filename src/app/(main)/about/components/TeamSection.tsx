@@ -37,7 +37,6 @@ const TeamSection = () => {
     ];
 
     const hanlePaginationChange = (page: number) => {
-        console.log("Change to page:", page);
         setPage(page);
     }
 

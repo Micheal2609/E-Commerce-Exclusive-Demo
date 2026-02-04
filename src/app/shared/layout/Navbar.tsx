@@ -22,7 +22,6 @@ const Navbar = () => {
 
 
     const handleToggleMenu = (isSelected: boolean) => {
-        console.log("isSelected", isSelected);
         setIsSelected(isSelected);
     }
     return (
@@ -99,6 +98,7 @@ const Navbar = () => {
                             <Image className="transition-all duration-150 filter group-hover:brightness-0 group-hover:invert" src="/assets/images/icon/Wishlist.svg" alt="Wishlist Icon" preview={false} />
                         </Link>
                         <Link
+                            href="/cart"
                             aria-label="Giỏ hàng"
                             className="group inline-flex items-center justify-center w-10 h-10 rounded-full bg-transparent cursor-pointer hover:bg-[#DB4444]!"
                         >

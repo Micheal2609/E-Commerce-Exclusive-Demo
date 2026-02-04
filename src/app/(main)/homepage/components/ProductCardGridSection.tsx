@@ -84,7 +84,6 @@ const ProductCardGridSection = () => {
             imageUrl: "/assets/images/product/ps5-slim-goedkope-playstation_large 1.png",
         },
     ];
-    console.log("dataFake", dataFake.length);
     return (
         <div className="grid grid-cols-4 gap-2 overflow-hidden overflow-x-scroll">
             {dataFake && dataFake.map((item) => <ProductCard product={item} key={item.id} />)}
