@@ -3,5 +3,9 @@ interface I_CreateAccountFormValues {
   email: string;
   password: string;
 }
+interface I_LoginFormValues {
+  email: string;
+  password: string;
+}
 
-export type { I_CreateAccountFormValues }
+export type { I_CreateAccountFormValues, I_LoginFormValues }

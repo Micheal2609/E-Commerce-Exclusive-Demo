@@ -2,13 +2,14 @@
 
 import { Button } from "@/src/shared/components"
 import { Form, Image, Input } from "antd"
-import { I_CreateAccountFormValues } from "../interfaces";
+import { I_LoginFormValues } from "../interfaces";
+// import Link from "next/link";
 
 const LoginForm = () => {
-    const [form] = Form.useForm<I_CreateAccountFormValues>();
-    const handleCreateAccount = (values: I_CreateAccountFormValues) => {
-        const { name, email, password } = values;
-        console.log("Create account with:", { name, email, password });
+    const [form] = Form.useForm<I_LoginFormValues>();
+    const handleCreateAccount = (values: I_LoginFormValues) => {
+        const { email, password } = values;
+        console.log("Login account with:", { email, password });
     }
 
     return (
@@ -19,11 +20,8 @@ const LoginForm = () => {
                 </div>
                 <div className="form-login py-[125.5px] px-32.25">
                     <Form name="login" layout="vertical" form={form} onFinish={handleCreateAccount}>
-                        <div className="text-4xl font-medium mb-4">Create an account</div>
+                        <div className="text-4xl font-medium mb-4">Log in to Exclusive</div>
                         <div className=" mb-4">Enter your details below</div>
-                        <Form.Item name="name">
-                            <Input placeholder="Name" variant="underlined" className="px-0! py-2!" />
-                        </Form.Item>
                         <Form.Item name="email">
                             <Input placeholder="Email or Phone Number" variant="underlined" className="px-0! py-2!" />
                         </Form.Item>
@@ -31,9 +29,10 @@ const LoginForm = () => {
                             <Input.Password placeholder="Password" variant="underlined" className="px-0! py-2!" />
                         </Form.Item>
 
-                        <div className="login-btns flex flex-col gap-2">
-                            <Button type="submit" text="Create Account" className="bg-[#DB4444] w-full h-full text-[#ffffff] text-center" />
-                            <Button text="Sign up with Google" icon="google" className="w-full h-full border-2 border-[#000000]" />
+                        <div className="login-btns flex gap-2">
+                            <Button type="submit" text="Log In" className="bg-[#DB4444] w-full h-full text-[#ffffff] text-center" />
+                            <Button text="Forget Password?" className="w-full h-full text-[#DB4444]" />
+                            {/* <Link href="/auth/login" className="text-center text-[#000000]!">Already have an account? <span className="font-medium hover:underline">Login</span></Link> */}
                         </div>
                     </Form>
                 </div>
