@@ -28,7 +28,7 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         const checkAuth = async () => {
             if (token) {
             } else {
-                router.push("/home");
+                // router.push("/home");
             }
             setIsLoading(false);
         };

@@ -1,7 +1,9 @@
+import { LoginForm } from "@/src/modules/auth/components/index";
+
 const LoginPage = () => {
     return (
         <>
-            <div className="">Login Page</div>
+            <LoginForm />
         </>
     )
 }
